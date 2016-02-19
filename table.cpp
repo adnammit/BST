@@ -97,27 +97,27 @@ int table::countNodes(node * root) const {
 
 //*****************************************************************************
 // COUNT THE LEAVES OF THE BST
-
-int table::height(void) const {
-  int height = 0;
-  if (root) {
-    height = height(root);
-  }
-  return height;
-}
-
-int table::height(node * root) const {
-  int height = 0;
-  // if we reach a leaf, return 1
-  if (!getLeft() && !getRight()) {
-    height = 0;
-  }
-  // otherwise look left and right and return the greatest height + 1
-  else if (!getLeft()) {
-    height = height(getRight());
-  }
-  else {
-    height = height(getLeft());
-  }
-  return height + 1;
-}
+// 
+// int table::height(void) const {
+//   int height = 0;
+//   if (root) {
+//     height = height(root);
+//   }
+//   return height;
+// }
+//
+// int table::height(node * root) const {
+//   int height = 0;
+//   // if we reach a leaf, return 1
+//   if (!root->getLeft() && !root->getRight()) {
+//     height = 0;
+//   }
+//   // otherwise look left and right and return the greatest height + 1
+//   else if (!root->getLeft()) {
+//     height = height(root->getRight());
+//   }
+//   else {
+//     height = height(root->getLeft());
+//   }
+//   return height + 1;
+// }
